@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
-import { apiKey } from "@/app/utils";
+import { apiKey } from "../../utils";
 
 export async function POST(request: Request) {
     const { text } = await request.json();
@@ -34,7 +34,7 @@ export async function POST(request: Request) {
         );
         return NextResponse.json({ text: response.data.choices[0].message.content.trim() });
     } catch (error: any) {
-        // console.log(error.response?.data?.error?.message || error.message);
+        console.log(error.response?.data?.error?.message || error.message);
         return NextResponse.json(
             { error: "Error generating text, please try again later." },
             { status: 500 }

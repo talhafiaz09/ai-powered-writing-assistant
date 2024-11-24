@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import axios from "axios";
-import { apiKey } from "@/app/utils";
+import { apiKey } from "../../utils";
 
 export async function POST(request: Request) {
     const { originalText, rewrittenText } = await request.json();

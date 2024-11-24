@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 import { IHistory } from "../types";
 import DownloadIcon from "@mui/icons-material/Download";
+import dayjs from "dayjs";
 
 export default function DownloadHistory({ data }: { data: IHistory[] }) {
     const [loading, setLoading] = useState(false);
@@ -13,9 +14,9 @@ export default function DownloadHistory({ data }: { data: IHistory[] }) {
         setLoading(true);
         let generateText = "";
         data.forEach((obj, index) => {
-            generateText += `${index + 1}) Created at: ${new Date(obj.created)}\nOld text: ${
-                obj.oldText
-            }\nGenerated text: ${obj.generatedText}\n\n`;
+            generateText += `${index + 1}) Created at: ${dayjs(obj.created).format(
+                "DD/MM/YYYY HH:mm"
+            )}\nOld text: ${obj.oldText}\nGenerated text: ${obj.generatedText}\n\n`;
         });
         const blob = new Blob([generateText], {
             type: "text/plain",
