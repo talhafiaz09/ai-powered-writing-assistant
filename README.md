@@ -16,6 +16,14 @@ Once downloaded, open the terminal in the project directory, and install depende
 yarn install
 ```
 
+## Production
+
+Run the app locally by running the following command in the terminal:
+
+```
+yarn dev
+```
+
 The app should now be up and running at http://localhost:3000
 
 ## Production
@@ -23,6 +31,22 @@ The app should now be up and running at http://localhost:3000
 The app is also deployed to vercel and is accessible at:
 
 https://ai-powered-writing-assistant-pink.vercel.app/
+
+## Build
+
+To create a build run the following command in the terminal:
+
+```
+yarn build
+```
+
+Run the build using following command in the terminal:
+
+```
+yarn start
+```
+
+The build will be running at http://localhost:3000
 
 ## Functionalities
 
