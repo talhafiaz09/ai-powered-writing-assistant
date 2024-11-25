@@ -106,6 +106,7 @@ const Home = () => {
                 <Grid size={{ xs: 6, sm: 3 }}>
                     <Autocomplete
                         disablePortal
+                        data-testid="tone"
                         value={{ label: options.tone, value: options.tone }}
                         options={[
                             { label: "Formal", value: "Formal" },
@@ -124,6 +125,7 @@ const Home = () => {
                 <Grid size={{ xs: 6, sm: 3 }}>
                     <Autocomplete
                         disablePortal
+                        data-testid="length"
                         value={{ label: options.length, value: options.length }}
                         options={[
                             { label: "Shorter", value: "Shorter" },
@@ -144,6 +146,7 @@ const Home = () => {
                 </Grid>
                 <Grid size={6}>
                     <TextField
+                        data-testid="textField"
                         label="Write something...."
                         variant="outlined"
                         value={text}
@@ -160,6 +163,7 @@ const Home = () => {
                 <Grid size={6} sx={{ display: "flex", justifyContent: "flex-end" }}>
                     <Button
                         variant="contained"
+                        data-testid="rewrite"
                         disabled={!text || loading}
                         sx={{
                             maxWidth: "15%",

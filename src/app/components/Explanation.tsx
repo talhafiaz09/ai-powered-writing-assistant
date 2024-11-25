@@ -39,7 +39,7 @@ export default function Explanation({ generatedText, oldText }: ExplanationProps
                         alignItems: "center",
                     }}
                 >
-                    <CircularProgress color="warning" />
+                    <CircularProgress data-testid="loader" color="warning" />
                     <Typography gutterBottom sx={{ color: "#333", fontSize: 14 }}>
                         Loading explanation...
                     </Typography>

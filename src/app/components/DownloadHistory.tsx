@@ -45,10 +45,10 @@ export default function DownloadHistory({ data }: { data: IHistory[] }) {
                             alignItems: "center",
                         }}
                     >
-                        <CircularProgress color="warning" />
+                        <CircularProgress data-testid="loader" color="warning" />
                     </Box>
                 ) : (
-                    <IconButton onClick={handleDownload}>
+                    <IconButton data-testid="download" onClick={handleDownload}>
                         <DownloadIcon color="success" sx={{ fontSize: 28 }} />
                     </IconButton>
                 ))}
