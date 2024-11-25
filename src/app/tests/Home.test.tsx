@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { IHistory } from "@/app/types";
 import React from "react";
-import Home from "./page";
+import Home from "../page";
 
 describe("Home Component", () => {
     test("Should render initial UI", () => {

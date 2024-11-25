@@ -1,26 +1,10 @@
 "use client";
 
-import {
-    Box,
-    Button,
-    Card,
-    CardContent,
-    CircularProgress,
-    Grid,
-    Paper,
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Typography,
-} from "@mui/material";
-import { useEffect, useState } from "react";
-import { IHistory } from "../types";
+import { Box, Button, Card, CardContent, CircularProgress, Typography } from "@mui/material";
 import GenerateText from "./GeneratedText";
 import DownloadHistory from "./DownloadHistory";
 import { DATA_STORAGE_KEY } from "../utils";
+import { IHistory } from "../types";
 
 export default function History({
     data,
