@@ -10,13 +10,21 @@ Get the code by either cloning this repository using git
 git clone https://github.com/talhafiaz09/ai-powered-writing-assistant.git
 ```
 
+You will need to create a `.env.local` file in the root and add following environment variable. You can get the api from [OpenAI](https://openai.com/api/).
+
+```
+OPENAI=your_api_key
+```
+
+Replace `your_api_key` with the actual api key you have generated.
+
 Once downloaded, open the terminal in the project directory, and install dependencies with:
 
 ```
 yarn install
 ```
 
-## Production
+## Local
 
 Run the app locally by running the following command in the terminal:
 
@@ -47,6 +55,22 @@ yarn start
 ```
 
 The build will be running at http://localhost:3000
+
+## Testing
+
+This project uses Jest as the testing framework to ensure code quality and reliability.
+
+Ensure all dependencies are installed:
+
+```
+yarn install
+```
+
+To run the test suite, use:
+
+```
+yarn test
+```
 
 ## Functionalities
 
