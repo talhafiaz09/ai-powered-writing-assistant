@@ -21,8 +21,7 @@ export default function Explanation({ generatedText, oldText }: ExplanationProps
             });
             setExplanation(response.data.explanation);
         } catch (err) {
-            console.log("Error generating text:", err);
-            setError("Failed to generate text, please try again.");
+            setError("Failed to generate explanation, please try again.");
         } finally {
             setLoading(false);
         }
@@ -52,19 +51,34 @@ export default function Explanation({ generatedText, oldText }: ExplanationProps
                     <Typography fontSize={14}>{explanation}</Typography>
                 </>
             ) : (
-                <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-                    <Button
-                        variant="contained"
+                <>
+                    <Box
                         sx={{
-                            maxWidth: "15%",
-                            textTransform: "none",
+                            display: "flex",
+                            alignSelf: "center",
+                            flex: 1,
+                            flexDirection: "column",
+                            alignItems: "center",
                         }}
-                        color="warning"
-                        onClick={getExplanation}
                     >
-                        Explain
-                    </Button>
-                </Box>
+                        <Typography gutterBottom sx={{ color: "#333", fontSize: 14 }}>
+                            {error}
+                        </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+                        <Button
+                            variant="contained"
+                            sx={{
+                                maxWidth: "15%",
+                                textTransform: "none",
+                            }}
+                            color="warning"
+                            onClick={getExplanation}
+                        >
+                            Explain
+                        </Button>
+                    </Box>
+                </>
             )}
         </Box>
     );

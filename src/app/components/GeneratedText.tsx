@@ -21,6 +21,7 @@ export default function GenerateText({
     loading,
     showTitle = true,
     showExplain,
+    error,
 }: GenerateTextProps) {
     return (
         <Box>
@@ -37,6 +38,21 @@ export default function GenerateText({
                     <CircularProgress color="warning" />
                     <Typography gutterBottom sx={{ color: "#333", fontSize: 14 }}>
                         Generating results
+                    </Typography>
+                </Box>
+            )}
+            {error && (
+                <Box
+                    sx={{
+                        display: "flex",
+                        alignSelf: "center",
+                        flex: 1,
+                        flexDirection: "column",
+                        alignItems: "center",
+                    }}
+                >
+                    <Typography gutterBottom sx={{ color: "#333", fontSize: 14 }}>
+                        {error}
                     </Typography>
                 </Box>
             )}

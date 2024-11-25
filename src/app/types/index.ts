@@ -12,6 +12,7 @@ export interface ExplanationProps {
 export interface GenerateTextProps {
     generatedText: string;
     oldText: string;
+    error?: string;
     loading?: boolean;
     showTitle?: boolean;
     showExplain?: boolean;

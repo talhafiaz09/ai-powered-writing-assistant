@@ -181,6 +181,7 @@ const Home = () => {
                         generatedText={generatedText}
                         oldText={text}
                         loading={loading}
+                        error={error}
                         showExplain
                     />
                 </Grid>
